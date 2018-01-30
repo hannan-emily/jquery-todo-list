@@ -1,17 +1,41 @@
 //sing jquery, so, add this to the top to contain rest of jquery content
 $(document).ready(function () {
 
-//add in text content from input form as a new li, into parent ul list
-$('.button').click(function() {
-  $('ul').append('<li>($('input.newDemand'))</li>');
+  $('.button').on('click', (function() {
+    // create new ul list
+    var listItem = $('<li>');
+    //changes list item to what we want
+    listItem.html($('#submitText').val());
+    $("#toDoList").append(listItem);
+    $('#submitText').val("");
+
+}))
 });
 
-// $("ul").on('click', 'li', function(event) {
-//     console.log(event.target, "event delegation");
-//     //this is a child function tht works on all parent items. this changes clicked items to red
-//     $(event.target).css("color", "red");
-//   })
+
+// var listItem = function() {
+//   var newListItem = ($('#submitText').val);
+//   $('list').append(newListItem);
+//   $('#submitText').val('');
+//   // $(#submitText).focus();
+// }
+//
+// //when our submit button is clicked
+// $('button').click(function() {
+// //grab the text value from in the text section
+//   var newItem = $('#submitText').value;
+//   //grab our ul, class=demandsList, append the text as a new li
+//   $('.demandsList').append('<li>' + newItem + '</li>');
+// })
+
+
+// $('button').click(function() {
+//   console.log('you clicked the button yo');
 // });
-//second, be able to remove li items from the ul
-
-});
+//
+// var newItem = $('submitText').value;
+// console.log('newItem');
+//
+// $('button').click(function () {
+//   $('.demandsList').append("<li>" + newItem + "</li>");
+// })
