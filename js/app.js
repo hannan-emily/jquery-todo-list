@@ -8,7 +8,7 @@ $(document).ready(function () {
     listItem.html($('#submitText').val());
     $("#toDoList").append(listItem);
     $('#submitText').val("");
-
+    $('#submitText').focus();
 }))
 });
 
