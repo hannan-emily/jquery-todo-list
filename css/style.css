@@ -1,15 +1,14 @@
+html,body {
+  margin:0;
+  padding:0;
+}
+
 body {
   font-family: 'VT323', monospace;
   text-align: center;
-}
-
-ul {
-  font-size: 16px;
-}
-
-.demandContainer {
-  width: 80%
-  margin: 0 auto;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("./pirate.png");
 }
 
 .button {
@@ -18,4 +17,18 @@ ul {
 
 #submitText{
   border: 1px solid;
+}
+
+.container {
+  width: 20%;
+  margin: 20px auto;
+  background: #FCBE00;
+  border: 5px solid black;
+}
+
+ul {
+  font-size: 16px;
+  position: relative;
+  margin-left: -40px;
+  list-style-position: inside;
 }
